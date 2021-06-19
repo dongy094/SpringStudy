@@ -8,6 +8,10 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class TimeTraceAop {
 
+	
+	/** <pre>AOP_TEST</pre>
+	 * 
+	 */
     @Around("execution(* hello.hellospring..*(..)) && !target(hello.hellospring.service.SpringConfig)")
     public Object execute(ProceedingJoinPoint joinPoint) throws Throwable{
         long start = System.currentTimeMillis();
